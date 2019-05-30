@@ -2,23 +2,23 @@
 
 <h1>Students</h1>
 
-<table>
+<table class="table">
   <thead>
-    <tr>
+    <tr class="datos">
       <th>Name</th>
       <th>Age</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="todo">
     <% @students.each do |student| %>
       <tr>
         <td><%= student.name %></td>
         <td><%= student.age %></td>
-        <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', student, class:"btn btn-primary primerbotom" %></td>
+        <td><%= link_to 'Edit', edit_student_path(student), class:"btn btn-primary  segundo" %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary tercero" %></td>
       </tr>
     <% end %>
   </tbody>
