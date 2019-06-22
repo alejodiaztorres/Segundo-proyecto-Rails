@@ -1,0 +1,10 @@
+<h1>Landing</h1>
+
+<%= @students.each do |s| %>
+<div class="table">
+  <%= s.name %>
+  <%= s.age %>
+  <%= s.email %>
+
+</div>
+<% end %>
